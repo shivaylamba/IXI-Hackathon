@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Bootstrap Example</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+                <title>Github Analyser</title>
+              </head>
+<body style="overflow-y: hidden;">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Github</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/linkedin">Linkedin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/resume">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Overall Score</a>
+                  </li>
+                </ul>
+              </nav>
+<style>
+
+iframe > html{
+  overflow: hidden !important;
+}
+
+</style>
+<iframe width="100%" src="https://codebust.herokuapp.com/" style="height: 100vh;" name="iframe_a" id="iframe_a" style="overflow-y: hidden;"></iframe>
+<script>
+  setTimeout(() => {
+document.getElementById("frame_a").style.height = `${document.getElementById("frame_a").clientHeight - 56}px`;
+    
+  }, 300);
+</script>
+</body>
+</html>
