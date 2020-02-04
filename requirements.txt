@@ -158,7 +158,7 @@ pycodestyle==2.5.0
 pycosat==0.6.3
 pycparser==2.19
 pycrypto==2.6.1
-pycryptodome==3.4.3
+pycryptodome==3.6.6
 pycurl==7.43.0.3
 pyflakes==2.1.1
 Pygments==2.4.2
