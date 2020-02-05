@@ -307,16 +307,16 @@ def resumescore():
                 }
             ]
         }
-        r = requests.post("https://resumeanalyzer.cognitiveservices.azure.com/text/analytics/v2.1-preview/entities",headers={"Ocp-Apim-Subscription-Key":"2a546b09cd7a4b23baf3fa93663fe684","Content-Type":"text/json"},json=body)
-        print(str(r.json()))
-        quanArr = []
-        r = r.json()
-        r = r["documents"][0]["entities"]
-        for i in r:
-            if i['type']=="Quantity":
-                quanArr.append(i)
-        print(quanArr)
-        pdfFileObj.close() 
+        # r = requests.post("https://resumeanalyzer.cognitiveservices.azure.com/text/analytics/v2.1-preview/entities",headers={"Ocp-Apim-Subscription-Key":"2a546b09cd7a4b23baf3fa93663fe684","Content-Type":"text/json"},json=body)
+        # # print(str(r.json()))
+        # quanArr = []
+        # r = r.json()
+        # r = r["documents"][0]["entities"]
+        # for i in r:
+        #     if i['type']=="Quantity":
+        #         quanArr.append(i)
+        # print(quanArr)
+        # pdfFileObj.close() 
         skill = (request.form["skills"]).lower().split(",")
         cv = cv.replace("\n",'')
         cv = cv.split(" ")
@@ -336,11 +336,12 @@ def resumescore():
             elif dic[j]>4:
                 dic[j] = 95
             else:
-                dic[j] = dic[j]*25 
+                dic[j] = dic[j]*50 
             sum =sum +dic[j]
         avg = sum/len(dic)   
         print(dic)
-        mainObj = {"obj":dic,"arr":list(dic.keys()),"quanArr":quanArr}
+        mainObj = {"obj":dic,"arr":list(dic.keys())}
+        # mainObj = {"obj":dic,"arr":list(dic.keys()),"quanArr":quanArr}
         print(str(mainObj))
         return render_template('analyze.html',t=mainObj)
    return render_template('cv.html',t= "hello")
