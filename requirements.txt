@@ -72,7 +72,7 @@ h5py==2.9.0
 HeapDict==1.0.1
 honeybadger==0.2.0
 html5lib==1.0.1
-httplib2==0.13.1
+httplib2==0.18.0
 idna==2.8
 imageio==2.6.0
 imagesize==1.1.0
