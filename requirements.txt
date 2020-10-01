@@ -45,7 +45,7 @@ decorator==4.4.0
 defusedxml==0.6.0
 distributed==2.5.2
 dj-database-url==0.5.0
-Django==2.2.5
+Django==2.2.13
 django-admin==2.0.0
 django-ckeditor==5.5.0
 django-excel-response2==2.0.8
