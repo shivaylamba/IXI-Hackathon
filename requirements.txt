@@ -166,7 +166,7 @@ pylint==2.4.2
 pyodbc==4.0.27
 pyOpenSSL==19.0.0
 pyparsing==2.4.2
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pyreadline==2.1
 Pyrebase==3.0.27
 pyrsistent==0.15.4
